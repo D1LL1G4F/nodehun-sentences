@@ -71,7 +71,7 @@ function checkWord(nodehun, word, callback) {
 
 function trimWord(word) {
     var LTrim = xRegExp('^\\P{Letter}*', 'ig');
-    var lettersOnly = xRegExp('^(\\p{Letter}+[.]*)*', 'ig');
+    var lettersOnly = xRegExp('^(\\p{Letter}+[.\'@]*)*', 'ig');
     word = xRegExp.replace(word, LTrim, '');
     word = xRegExp.match(word, lettersOnly, 'one');
     word = word ? word : '';
